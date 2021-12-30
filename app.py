@@ -1,7 +1,6 @@
 import flask
 import base64
 import pickle
-import traceback
 
 app = flask.Flask(__name__)
 
