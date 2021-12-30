@@ -19,5 +19,4 @@ def index():
 
 	return flask.render_template("index.html", image=unpickled)
 
-	
 app.run("0.0.0.0", 8000)
