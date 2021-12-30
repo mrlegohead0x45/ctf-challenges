@@ -12,11 +12,11 @@ def index():
 		with open("image.jpg.b64", "r") as file:
 			image = file.read()
 		
-		return flask.render_template("index.html", image=image)
+		return flask.render_template("index.jinja", image=image)
 
 	decoded = base64.urlsafe_b64decode(data)
 	unpickled = pickle.loads(decoded)
 
-	return flask.render_template("index.html", image=unpickled)
+	return flask.render_template("index.jinja", image=unpickled)
 
 app.run("0.0.0.0", 8000)
